@@ -1,0 +1,7 @@
+.env
+.env.local
+.env.production
+.prettierrc
+package-lock.json
+
+/node_modules
