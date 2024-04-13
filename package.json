@@ -1,22 +1,20 @@
 {
-  "name": "vite-js",
-  "version": "0.0.0",
+  "name": "bitango",
+  "version": "1.0.0",
+  "description": "`cp .env.example .env` and configure",
+  "main": "vite.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
   },
-  "devDependencies": {
-    "sass": "^1.43.2",
-    "vite": "^2.4.4",
-    "vite-plugin-vue2": "^1.8.1",
-    "vue-template-compiler": "^2.6.14"
-  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@vue/composition-api": "^1.1.4",
+    "@vitejs/plugin-vue2": "^2.3.1",
+    "vue": "^2.7.16",
     "axios": "^1.6.8",
-    "vue": "^2.6.14",
-    "vuetify": "^2.5.10",
-    "vuex": "^3.1.3"
+    "vuex": "^3.1.3",
+    "vuetify": "^2.2.11"
   }
 }

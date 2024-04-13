@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { ref, defineComponent } from '@vue/composition-api'
+import { ref, defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'Registration',

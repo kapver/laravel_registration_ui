@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent } from "vue";
 import Registration from './components/Registration.vue'
 import Flash from './components/Flash.vue'
 
