@@ -13,10 +13,6 @@ export default {
   name: 'Flash',
   computed: {
     messages() {
-
-      // console.log(this.notifications)
-      // console.log(this.errors)
-
       return this.notifications.concat(this.errors);
     },
     notifications() {

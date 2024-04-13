@@ -52,10 +52,10 @@ export default defineComponent({
 
   setup() {
     return {
-      email: ref('kapver@gmail.com'),
-      name: ref('Pavlo'),
+      email: ref(),
+      name: ref(),
       country_id: ref(),
-      phone_number: ref(), // +972 53 111-22-33
+      phone_number: ref(''), // +972 53 111-22-33
       country_prefix: ref('')
     }
   },
@@ -70,7 +70,7 @@ export default defineComponent({
     register() {
       this.$store.dispatch('register', {
         name: this.name,
-        phone_number: this.phone_number,
+        phone_number: this.getPhoneNumber(),
         email: this.email,
         country_id: this.country_id
       })
@@ -115,18 +115,15 @@ export default defineComponent({
 
     formatPhoneNumber(phoneNumber) {
 
-      // Remove any non-digit characters from the phone number
       if (!phoneNumber.startsWith('+')) {
         phoneNumber = phoneNumber.replace(/\D/g, '');
       }
 
-      if(phoneNumber.length > 9) {  
+      if(phoneNumber.length > 9) {
         phoneNumber = phoneNumber.substring(0, phoneNumber.length - 1);
       }
 
-      console.log(phoneNumber, phoneNumber.length)
-
-      // Format the phone number according to its length
+      // Format the phone number according to its length (not unified method and need improvements)
       if (phoneNumber.length > 3 && phoneNumber.length <= 5) {
         return phoneNumber.replace(/(\d{2})(\d{0,3})/, '$1 $2');
       } else if (phoneNumber.length > 5 && phoneNumber.length < 8) {
@@ -136,7 +133,12 @@ export default defineComponent({
       } else {
         return phoneNumber;
       }
-    }
+    },
+
+    getPhoneNumber() {
+      return '+' + (this.country_prefix + this.phone_number).replace(/\D/g, '');
+
+    },
   },
 
   computed: {
