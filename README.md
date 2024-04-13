@@ -1,7 +1,8 @@
-# Vue 2 + Vite
+## Commands
 
-This template should help get you started developing with Vue 2 in Vite.
+`npm i`
 
-## Recommended IDE Setup
+`cp .env.example .env` and configure
 
-[VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
+`npm run dev` or `yarn dev`
+
